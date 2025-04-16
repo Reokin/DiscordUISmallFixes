@@ -1,0 +1,98 @@
+@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
+
+:root {
+    --custom-app-top-bar-height: 32px;
+    --custom-channel-header-height: 42px;
+}
+
+.channelTextArea_f75fb0   {
+	margin-bottom: 20px;
+	.inner__74017 {
+		--custom-channel-textarea-text-area-max-height: 44px;
+		--custom-channel-textarea-text-area-height: var(
+			--custom-channel-textarea-text-area-max-height
+		);
+	}
+}
+
+.anchor_edefb8 {
+    display: none;
+}
+
+.container__9293f {
+    padding: 10px;
+}
+
+.visual-refresh .attachButton__0923f {
+    border-right: 1px solid var(--border-subtle);
+}
+
+.visual-refresh .form_f75fb0 {
+    margin-top: 0px;
+}
+
+.container__675e5 {
+    display: none;
+}
+
+.sectionDivider__35e86 {
+    display: none;
+}
+
+.privateChannelsHeaderContainer__99e7c {
+    margin-top: 6px;
+}
+
+
+.channelAppLauncher_e6e74f, .buttonContainer_e6e74f, .app-launcher-entrypoint {
+    display: none;
+}
+
+.typing_b88801 {
+	margin-bottom: -2px;
+}
+
+.visual-refresh .panels_c48ade {
+	right: var(--space-xs) !important;
+	left: auto;
+	bottom: var(--space-xs);
+	width: calc(100% - var(--space-xs) * 2 - var(--custom-guild-list-width));
+}
+
+.visual-refresh .guilds_c48ade {
+	margin-bottom: 0;
+}
+
+.panel__5dec7 {
+    padding-top: 2px;
+    padding-bottom: 10px;
+    height: 32px;
+    max-height: 32px;
+}
+
+.connection_e131a9 {
+    padding-top: 0px;
+    padding-bottom: 8px;
+    height: 32px;
+    max-height: 32px;
+}
+
+.text-sm\/medium_cf4812 {
+    font-size: 12px;
+}
+
+.text-md\/medium_cf4812 {
+    font-size: 14px;
+}
+
+.gameName__8c6c2 {
+    font-size: 14px;
+}
+
+.title__9293f {
+    font-size: 16px;
+}
+
+.visual-refresh .title_f75fb0 {
+    padding-left: 10px;
+}
