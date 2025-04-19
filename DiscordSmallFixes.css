@@ -1,8 +1,17 @@
 @import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
 
 :root {
-    --custom-app-top-bar-height: 32px;
+    --custom-app-top-bar-height: 24px;
     --custom-channel-header-height: 42px;
+    --custom-channel-members-bg: color-mix(in oklab,var(--primary-630) 100%,var(--theme-base-color,#000) var(--theme-base-color-amount,0%));
+}
+
+.visual-refresh .wrapper_ef3116 {
+    background-color: var(--app-background-frame);
+}
+
+.visual-refresh .bar_c38106 {
+    background-color: var(--app-background-frame);
 }
 
 .channelTextArea_f75fb0   {
@@ -13,6 +22,61 @@
 			--custom-channel-textarea-text-area-max-height
 		);
 	}
+}
+
+ul[data-list-id="guildsnav"] > div.itemsContainer_ef3116 {
+    margin-top: 8px;
+}
+
+span[class*="timestampInline_"] time::before {
+  content: attr(aria-label);
+  font-size: 12px;
+}
+
+span[class*="timestampInline_"] {
+  font-size: 0px !important;
+}
+
+[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
+[class*="dm_"]:has([class*="linkPlated_"]) {
+    & [class*="linkPlated_"] { padding-right: var(--space-16); }
+    & [class*="closeButtonPlated_"] {
+        opacity: 0.7;
+        &:hover { opacity: 1; }
+        & [class^="innerCloseButtonPlated"] {
+            opacity: unset; 
+            background: none;
+            & svg {
+                color: inherit;
+                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
+            }
+        }
+    }
+}
+
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
+
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(1),
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(2),
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(3),
+.separator_f84418 {
+    display: none;
+}
+
+.anchor_edefb8:has(.button__85643) {
+    display: none;
+}
+
+.recentsIcon_c99c29 {
+    transform: scale(0.9);
+    width: 24px;
+}
+
+.iconWrapper__9293f:has(.icon__9293f > .updateIconForeground__49676) {
+    transform: scale(0.9);
 }
 
 .container__9293f {
@@ -39,24 +103,38 @@
     margin-top: 6px;
 }
 
-
 .channelAppLauncher_e6e74f, .buttonContainer_e6e74f, .app-launcher-entrypoint {
     display: none;
 }
 
 .typing_b88801 {
-	margin-bottom: -2px;
+    margin-bottom: -3px;
+    transform: scale(1.1);
+    margin-left: 60px;
 }
 
-.visual-refresh .panels_c48ade {
-	right: var(--space-xs) !important;
-	left: auto;
-	bottom: var(--space-xs);
-	width: calc(100% - var(--space-xs) * 2 - var(--custom-guild-list-width));
+.visual-refresh div[class^="sidebar_"] section[class^="panels_"] {
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
+    left: var(--custom-guild-list-width);
+    bottom: 0px;
+    border-radius: 0px;
+    border: none;
+    
+    .inner_e131a9 .text-sm\/medium_cf4812 {
+        font-size: 12px;
+    }
+
+    .inner_e131a9 .text-md\/medium_cf4812 {
+        font-size: 14px;
+    }
+
+    .gameName__8c6c2 {
+        font-size: 14px;
+    }
 }
 
-.visual-refresh .guilds_c48ade {
-	margin-bottom: 0;
+.visual-refresh nav[class*=guilds_] {
+    margin-bottom: unset;
 }
 
 .panel__5dec7 {
@@ -73,22 +151,10 @@
     max-height: 32px;
 }
 
-.text-sm\/medium_cf4812 {
-    font-size: 12px;
-}
-
-.text-md\/medium_cf4812 {
-    font-size: 14px;
-}
-
-.gameName__8c6c2 {
-    font-size: 14px;
-}
-
-.title__9293f {
-    font-size: 16px;
-}
-
 .visual-refresh .title_f75fb0 {
     padding-left: 10px;
+}
+
+.title_c38106 > .title__85643 {
+    display: none !important;
 }
